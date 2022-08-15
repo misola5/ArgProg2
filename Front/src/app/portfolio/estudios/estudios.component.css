@@ -1,0 +1,14 @@
+.estudios {
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;   
+}
+#uba {
+    padding-right: 10%;
+    
+}
+
+img {
+    height: 100px;
+    width: auto;
+}

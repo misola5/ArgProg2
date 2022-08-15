@@ -1,0 +1,22 @@
+#teclado {
+    height: 250px;
+    width: 100%;
+  }
+  
+  .avatar {
+    vertical-align: middle;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+#barrita {
+    
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #in {
+    color: white;
+    cursor: pointer;
+  }

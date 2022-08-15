@@ -1,0 +1,48 @@
+
+<div class="cont">
+    <h1>Datos Personales</h1>
+     <!-- ****Con la siguiente forma tiraba error, evidentemente cargaba primero el JSON y luego la pagina, pero 
+     andaba bien -->
+    <!-- <p>Nombre: {{datosPersona.nombre}} {{datosPersona.apellido}}</p>
+    <p>Nacionalidad: {{datosPersona.nacionalidad}}</p>
+    <p>Nacimiento: {{datosPersona.nacimiento}}</p>
+    <p>Residencia: {{datosPersona.residencia}}</p>
+    <p>{{datosPersona.about}}</p> -->
+        <!-- *****De esta manera ya no tira error -->
+    <p>Nombre: {{nombre}} {{apellido}}</p>
+    <p>Nacionalidad: {{nacionalidad}}</p>
+    <p>Nacimiento: {{nacimiento}}</p>
+    <p>Residencia: {{residencia}}</p>
+    <p>{{about}}</p>
+</div>
+
+            <!-- ***Misma Situacion -->
+<!-- <div class="logos">
+    <div>
+        <a [href]="datosPersona.instagram"><img src="./assets/instag.png" alt="Instagram"></a>
+    </div>
+    <div>
+        <a [href]="datosPersona.linkedin"><img src="./assets/linkedin.png" alt="linkedin"></a>
+    </div>
+    <div>
+        <a href="mailto:{{datosPersona.email}}?"><img src="./assets/mail.png" alt="mail"></a>
+    </div>
+    <div>
+        <a href="https://wa.me/{{datosPersona.telefono}}"><img src="./assets/whatsapp.png" alt="Whatsapp"></a>
+    </div>
+</div> -->
+<div class="logos">
+    <div>
+        <a [href]="instagram"><img src="./assets/instag.png" alt="Instagram"></a>
+    </div>
+    <div>
+        <a [href]="linkedin"><img src="./assets/linkedin.png" alt="linkedin"></a>
+    </div>
+    <div>
+        <a href="mailto:{{email}}?"><img src="./assets/mail.png" alt="mail"></a>
+    </div>
+    <div>
+        <a href="https://wa.me/{{telefono}}"><img src="./assets/whatsapp.png" alt="Whatsapp"></a>
+    </div>
+</div>
+

@@ -1,0 +1,155 @@
+<section class="cont">
+
+
+    <h1> Estudios <fa-icon [icon]="faCirclePlus" style="color: green; float: right; font-size: 15px;"
+            (click)="openPopup()">
+        </fa-icon>
+    </h1>
+
+
+    <!-- <h3>Please click on the below button open popup</h3>
+    <hr />
+    <button
+      style="margin: 50px; padding: 10px"
+      type="button"
+      class="btn btn-primary"
+      (click)="openPopup()">Show Data
+    </button> -->
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: black;">Agregar estudio</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <form class="add-form">
+                            <div class="form-control">
+                                <label for="text">Título: </label>
+                                <input type="text" [(ngModel)]="ftitulo" name="ftitulo" id="ftitulo" placeholder="Insertar título">
+                            </div>
+                            <div class="form-control">
+                                <label for="text">Intitución: </label>
+                                <input type="text" [(ngModel)]="fintitucion" name="fintitucion" id="fintitucion" placeholder="Insertar Intitución">
+                            </div>
+                            <div class="form-control">
+                                <label for="text">Año de ingreso: </label>
+                                <input type="text" [(ngModel)]="fanioingreso" name="fanioingreso" id="fanioingreso" placeholder="Insertar año">
+                            </div>
+                            <div class="form-control">
+                                <label for="text">Año de egreso: </label>
+                                <input type="text" [(ngModel)]="fanioegreso" name="fanioegreso" id="fanioegreso" placeholder="Insertar año">
+                            </div>
+                            <div class="form-control">
+                                <label for="text">URL imagen: </label>
+                                <input type="text" [(ngModel)]="furlimagenestudio" name="furlimagenestudio" id="furlimagenestudio" placeholder="Insertar url">
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  class="btn btn-success"
+                    (click)="guardar( )">Guardar</button>
+                    <button type="button" class="btn btn-danger" (click)="closePopup()">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <div class="estudios" *ngFor="let estudio of datosEstudio">
+            <!-- <div *ngIf="estudio.titulo == 'Veterinario'"> -->
+            <div>
+                <ul>
+                    <li>
+                        <h2>{{estudio.titulo}}
+                            <fa-icon (click)="eliminar(estudio.idEstudio)" [icon]="faTimes"
+                                style="color: red; float: right; font-size: 15px;"></fa-icon>
+                        </h2>
+                        <p>{{estudio.intitucion}}</p>
+                        <p>{{estudio.anioingreso}}</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div *ngIf="estudio.titulo == 'Veterinario'"> -->
+            <div>
+                <img [src]='estudio.urlimgestudio' alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="estudios">
+        <div>
+            <ul>
+                <li>
+                    <h2>Veterinario</h2>
+                    <p>Facultad de Ciencias Veterinarias - Universidad de Buenos Aires</p>
+                    <p>2013</p>            
+                </li>
+            </ul>        
+        </div>
+        <img src="./assets/uba.jpg" alt="Logo de la UBA" id="uba">
+    </div>
+    <div class="estudios">
+        <div>
+            <ul>
+                <li >
+                    <h2>Desarrollador front inicial (HTML5, CSS3, JS3)</h2>
+                    <p>U.T.N. en colaboración con la Municipalidad de Las Flores</p>
+                    <p>2021</p>
+                </li>
+            </ul>        
+        </div>    
+        <img src="./assets/utndelta.png" alt="utn delta">
+    </div>
+    <div class="estudios">
+        <div>
+            <ul>
+                <li>
+                    <h2>Full Stack Developer</h2>
+                    <p>Argentina programa - Ministerio de Desarrollo Productivo, INTI y CESSI</p>
+                    <p>2022</p>
+                </li>
+            </ul>        
+        </div>
+        <img src="./assets/argpro.png" alt="Argentina programa">
+    </div> -->
+</section>
